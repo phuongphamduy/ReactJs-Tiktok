@@ -11,7 +11,7 @@
     color: #fff;
     border: 1px solid transparent;
     user-select: none;
-
+    background-color: transparent;
     + .wrapper {
         margin-left: 8px;
     }
@@ -20,6 +20,12 @@
 .icon + .title,
 .title + .icon {
     margin-left: 8px;
+}
+
+.icon {
+    display: inline-block;
+    width: 24px;
+    text-align: center;
 }
 
 .disabled {

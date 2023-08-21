@@ -21,7 +21,6 @@ function Button({
     rightIcon,
     ...passProps
 }) {
-    console.log(className);
     let Comp = 'button';
     const props = {
         onClick,
