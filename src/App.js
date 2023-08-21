@@ -1,6 +1,6 @@
 import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import { publicRoutes } from '~/route';
-import { DefaultLayout, HeaderOnly } from '~/components/Layout';
+import { DefaultLayout } from '~/components/Layout';
 import { Fragment } from 'react';
 
 function App() {
@@ -21,6 +21,7 @@ function App() {
 
                             return (
                                 <Route
+                                    key={index}
                                     path={item.path}
                                     element={
                                         <Layout>
