@@ -19,9 +19,6 @@ import Button from '~/components/Button';
 import style from './Header.module.scss';
 import images from '~/assets/images';
 import Menu from '~/components/Popper/Menu';
-import { InboxIcon, MessageIcon } from '~/components/Icons';
-import Image from '~/components/Image';
-import Search from '~/components/Layout/components/Search';
 
 const cx = classNames.bind(style);
 
