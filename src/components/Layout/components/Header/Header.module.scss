@@ -112,6 +112,25 @@
     color: var(--default-text-color);
     padding: 15px;
     cursor: pointer;
+    position: relative;
+
+    .action-btn-notify {
+        position: absolute;
+        top: 20%;
+        right: 0;
+        font-size: 1.4rem;
+        height: 20px;
+        padding: 0 6px;
+        background-color: var(--primary);
+        border-radius: 10px;
+        line-height: 18px;
+        font-weight: 600;
+    }
+
+    .icon {
+        display: flex;
+        align-items: center;
+    }
 }
 
 .more-btn {

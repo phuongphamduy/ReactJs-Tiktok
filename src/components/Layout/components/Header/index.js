@@ -26,6 +26,8 @@ import style from './Header.module.scss';
 import images from '~/assets/images';
 import AccountItem from '~/components/AccountItem';
 import Menu from '~/components/Popper/Menu';
+import { InboxIcon, MessageIcon } from '~/components/Icons';
+import Image from '~/components/Image';
 
 const cx = classNames.bind(style);
 
@@ -129,6 +131,17 @@ function Header() {
                                     <FontAwesomeIcon icon={faCloudUpload} />
                                 </button>
                             </Tippy>
+                            <Tippy delay={[0, 200]} content={'Messages'} placement="bottom">
+                                <button className={cx('action-btn')}>
+                                    <MessageIcon className={cx('icon')} />
+                                </button>
+                            </Tippy>
+                            <Tippy delay={[0, 200]} content={'Inbox'} placement="bottom">
+                                <button className={cx('action-btn')}>
+                                    <InboxIcon className={cx('icon')} />
+                                    <span className={cx('action-btn-notify')}>72</span>
+                                </button>
+                            </Tippy>
                         </>
                     ) : (
                         <>
@@ -138,7 +151,7 @@ function Header() {
                     )}
                     <Menu items={USER_MENU}>
                         {currentUser ? (
-                            <img
+                            <Image
                                 src="https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/65556a9a851d5f1d92c282cb1d94b3d0.jpeg?x-expires=1692867600&x-signature=g49EzYnotze08rsiUcqJkjIMwWk%3D"
                                 className={cx('user-avatar')}
                                 alt="NguyenVanA"
