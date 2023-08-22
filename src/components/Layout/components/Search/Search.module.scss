@@ -1,77 +1,78 @@
 .search,
 .search-result {
-    width: 461px;
+    width: 361px;
 }
 
 .search {
     position: relative;
-    display: flex;
     height: var(--search-height);
     padding-left: 16px;
+    display: flex;
+    background-color: rgba(22, 24, 35, 0.06);
     border-radius: var(--search-border-radius);
-    background-color: rgba(255, 255, 255, 0.12);
-
     border: 1.5px solid transparent;
+
     input {
-        background-color: transparent;
-        font-size: 1.6rem;
-        color: var(--default-text-color);
-        border: none;
-        outline: none;
-        height: 100%;
         flex: 1;
+        height: 100%;
+        color: var(--black);
+        font-size: 1.6rem;
         caret-color: var(--primary);
+        background-color: transparent;
+    }
+
+    input:not(:placeholder-shown) ~ .search-btn {
+        color: rgba(22, 24, 35, 0.75);
     }
 
     &::after {
         content: '';
-        background-color: var(--default-text-color);
-        width: 1px;
-        height: calc(var(--search-height) - var(--search-top-spacer) * 2);
         position: absolute;
         top: var(--search-top-spacer);
-        right: 52px;
-    }
-
-    input:not(:placeholder-shown) ~ .search-btn {
-        color: var(--default-text-color);
+        right: var(--search-button-width);
+        width: 1px;
+        height: calc(var(--search-height) - var(--search-top-spacer) * 2);
+        background-color: rgba(22, 24, 35, 0.12);
     }
 
     &:focus-within {
-        border-color: #595959;
+        border-color: rgba(22, 24, 35, 0.2);
     }
 }
 
-.search-result-heading {
+.search-title {
     padding: 5px 12px;
     font-size: 1.4rem;
     font-weight: 600;
-    color: #ffffffbf;
+    color: rgba(22, 24, 35, 0.5);
 }
 
 .clear,
 .loading {
     position: absolute;
-    right: 68px;
-    background-color: transparent;
+    right: calc(var(--search-button-width) + 16px);
     top: 50%;
     transform: translateY(-50%);
-    color: var(--default-text-color);
+    color: rgba(22, 24, 35, 0.34);
 }
 
 .search-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--search-button-width);
     height: 100%;
-    width: 52px;
-    background-color: transparent;
     border-top-right-radius: var(--search-border-radius);
     border-bottom-right-radius: var(--search-border-radius);
     font-size: 1.8rem;
+    color: rgba(22, 24, 35, 0.34);
+
     &:hover {
         cursor: pointer;
-        background-color: var(--default-text-color);
+        background-color: rgba(22, 24, 35, 0.03);
     }
 
     &:active {
-        background-color: rgba(255, 255, 255, 0.08);
+        background-color: rgba(22, 24, 35, 0.06);
     }
 }
