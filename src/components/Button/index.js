@@ -7,18 +7,18 @@ const cx = classNames.bind(styles);
 function Button({
     to,
     href,
-    onClick,
-    children,
-    small = false,
-    large,
-    text = false,
     primary = false,
     outline = false,
-    disabled = false,
+    text = false,
     rounded = false,
+    disabled = false,
+    small = false,
+    large = false,
+    children,
     className,
     leftIcon,
     rightIcon,
+    onClick,
     ...passProps
 }) {
     let Comp = 'button';
@@ -27,9 +27,10 @@ function Button({
         ...passProps,
     };
 
+    // Remove event listener when btn is disabled
     if (disabled) {
         Object.keys(props).forEach((key) => {
-            if (key.includes('on') && typeof props[key] === 'function') {
+            if (key.startsWith('on') && typeof props[key] === 'function') {
                 delete props[key];
             }
         });
@@ -44,14 +45,14 @@ function Button({
     }
 
     const classes = cx('wrapper', {
-        [className]: true,
-        text,
+        [className]: className,
         primary,
         outline,
-        small,
-        large,
+        text,
         disabled,
         rounded,
+        small,
+        large,
     });
 
     return (

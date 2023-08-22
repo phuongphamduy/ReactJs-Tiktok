@@ -1,5 +1,6 @@
+// Menu wrapper
 .menu-list {
-    width: 250px;
+    width: 224px;
 
     .menu-item {
         margin-left: 0;
@@ -10,27 +11,25 @@
     padding-bottom: 8px;
 }
 
-// menu-item
-
+// Menu items
 .menu-item {
     width: 100%;
     justify-content: flex-start;
     border-radius: 0;
-    font-weight: 500;
-    line-height: 1.8rem;
     padding: 11px 16px;
+    line-height: 1.8rem;
+    font-weight: 600;
 
     &.separate {
-        border-top: 1px solid rgba(255, 255, 255, 0.12);
+        border-top: 1px solid rgba(22, 24, 35, 0.12);
     }
 
     &:hover {
-        background-color: rgba(255, 255, 255, 0.04);
+        background-color: rgba(22, 24, 35, 0.03);
     }
 }
 
-//Header
-
+// Header
 .header {
     position: relative;
     height: 50px;
@@ -42,12 +41,11 @@
     height: 100%;
     background-color: transparent;
     cursor: pointer;
-    color: var(--default-text-color);
 }
 
 .header-title {
     position: absolute;
-    left: 50%;
     top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
 }
