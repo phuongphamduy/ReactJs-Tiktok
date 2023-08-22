@@ -15,8 +15,32 @@
     justify-content: flex-start;
     border-radius: 0;
     font-weight: 600;
+    line-height: 1.8rem;
     padding: 11px 16px;
     &:hover {
         background-color: rgba(255, 255, 255, 0.04);
     }
+}
+
+//Header
+
+.header {
+    position: relative;
+    height: 50px;
+    margin-top: -8px;
+}
+
+.back-btn {
+    width: 50px;
+    height: 100%;
+    background-color: transparent;
+    cursor: pointer;
+    color: var(--default-text-color);
+}
+
+.header-title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }

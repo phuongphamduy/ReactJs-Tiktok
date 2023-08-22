@@ -27,6 +27,19 @@ function Header() {
         {
             icon: <FontAwesomeIcon icon={faEarthAsia} />,
             title: 'Tiếng Việt',
+            children: {
+                title: 'Languague',
+                data: [
+                    {
+                        code: 'en',
+                        title: 'English',
+                    },
+                    {
+                        code: 'vi',
+                        title: 'VietNam',
+                    },
+                ],
+            },
         },
         {
             icon: <FontAwesomeIcon icon={faCircleQuestion} />,
